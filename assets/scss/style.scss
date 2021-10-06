@@ -1,0 +1,78 @@
+@import "variables";
+
+//                                               ---- Header ----
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    .header {
+        .row {
+            .navbar {
+                .header__logo {
+                    font-size: 40px;
+                    text-decoration: none;
+                    color: $color-1;
+                    font-weight: bold;
+                }
+                .nav {
+                    justify-content: flex-end;
+                    .nav__text {
+                        display: flex;
+                        margin-top: 16px;
+                        a {
+                            margin-left: 15px;
+                            text-decoration: none;
+                            color: $color-1;
+                            li {
+                                list-style: none;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+                .socials {
+                    .nav__socials {
+                        display: flex;
+                        margin-top: 16px;
+                        .socials__links {
+                            list-style: none;
+                            margin-left: 8px;
+                            font-size: 20px;
+                            color: $color-1;
+                        }
+                    }
+
+                }
+                .burger__menu {
+                    flex-direction: column;
+                    margin-left: 20px;
+                    display: none;
+                    .burger__line {
+                        border-radius: 50px;
+                        margin-bottom: 4px;
+                        background-color: $color-1;
+                        width: 50px;
+                        height: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 992px) {
+    .nav {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .burger__menu {
+        display: flex;
+    }
+}
