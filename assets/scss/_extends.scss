@@ -1,0 +1,13 @@
+%list-reset {
+    list-style: none;
+    text-decoration: none;
+}
+
+%button {
+    color: red;
+}
+
+
+.btn {
+    @extend button;
+}

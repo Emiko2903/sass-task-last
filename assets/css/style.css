@@ -1,3 +1,16 @@
+@charset "UTF-8";
+.container .footer .row .col ul, .container .footer .row .col ul li a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.container .main .flex__rev .main__info .btn {
+  width: 120px;
+  background-color: #4d4dff;
+  color: white;
+  border-radius: 9px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +49,12 @@
   font-size: 20px;
 }
 
+.container .header .row .navbar .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .container .header .row .navbar .socials .nav__socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,7 +75,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 20px;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container .header .row .navbar .burger__menu .burger__line {
@@ -65,15 +86,80 @@
   background-color: #7a7a7a;
   width: 50px;
   height: 7px;
+  display: none;
+}
+
+.container .main .flex__rev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  margin-bottom: 110px;
+}
+
+.container .main .flex__rev .main__foto .img {
+  max-width: 100%;
+}
+
+.container .footer .row .col ul {
+  padding-left: 0;
+}
+
+.container .footer .row .col ul li a {
+  color: #7a7a7a;
+}
+
+.container .footer .row .col .footer__socilas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.container .footer .row .col .footer__socilas .socials__footer {
+  font-size: 20px;
+  padding: 6px;
+  border-radius: 50% 50% 50% 0px;
+  background-color: #cac9c9;
+}
+
+.container .footer .row .col .input__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.container .footer .row .col .input__block .btn {
+  height: 30px;
+  background-color: #4b37ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0px;
+  color: white;
 }
 
 @media (max-width: 992px) {
   .nav {
     display: none;
+    /*Почему бургер не реагирует на медиазапросы*/
   }
-}
-
-@media (max-width: 991px) {
   .burger__menu {
     display: -webkit-box;
     display: -ms-flexbox;

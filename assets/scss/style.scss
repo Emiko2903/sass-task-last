@@ -1,12 +1,25 @@
 @import "variables";
 
-//                                               ---- Header ----
+%list-reset {
+    list-style: none;
+    text-decoration: none;
+}
+%button {
+    width: 120px;
+    background-color: rgb(77, 77, 255);
+    color: white;
+    border-radius: 9px;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+//                                               ---- Header ----
+
 
 .container {
     .header {
@@ -35,6 +48,7 @@
                     }
                 }
                 .socials {
+                    display: flex;
                     .nav__socials {
                         display: flex;
                         margin-top: 16px;
@@ -45,18 +59,88 @@
                             color: $color-1;
                         }
                     }
-
                 }
                 .burger__menu {
                     flex-direction: column;
                     margin-left: 20px;
-                    display: none;
+                    display: flex;
                     .burger__line {
                         border-radius: 50px;
                         margin-bottom: 4px;
                         background-color: $color-1;
                         width: 50px;
                         height: 7px;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//                                            --- Main / Section ---
+ 
+.container {
+    .main {
+        .flex__rev {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 110px;
+            .main__foto {
+                .img {
+                    max-width: 100%;
+                }
+            }
+            .main__info {
+                .btn {
+                    @extend %button;
+                }
+            }
+        }
+    }
+}
+
+
+//                                      --- Footer ---
+
+.container {
+    .footer {
+        .row {
+            .col {
+                ul {
+                   @extend %list-reset;
+                   padding-left: 0;
+                   li {
+                       a {
+                        @extend %list-reset;
+                        color: $color-1;
+                       }
+                   }
+                }
+                .footer__socilas {
+                    display: flex;
+                    justify-content: flex-start;
+                    .socials__footer {
+                        font-size: 20px;
+                        padding: 6px;
+                        border-radius: 50% 50% 50% 0px;
+                        background-color: rgb(202, 201, 201);
+                    }
+                }
+                .input__block {
+                    display: flex;
+                    margin-bottom: 20px;
+                    .btn {
+                        height: 30px;
+                        background-color: rgb(75, 55, 255);
+                        display: flex;
+                        align-items: center;
+                        border-radius: 0px;
+                        color: white;
                     }
                 }
             }
@@ -66,12 +150,13 @@
 
 
 
+
+
+
 @media (max-width: 992px) {
     .nav {
-        display: none;
+        display: none; /*Почему бургер не реагирует на медиазапросы*/
     }
-}
-@media (max-width: 991px) {
     .burger__menu {
         display: flex;
     }
